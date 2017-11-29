@@ -55,3 +55,24 @@ app4000.get('/abeng', function (req, res) {
 });
 app4000.listen(4000);
 
+// 如何做负载均衡
+// 实现的功能
+// 输入输入localhost：900 会跳转到4000的服务器上
+
+
+
+
+// 应用服务器A 绑定域名 localhost:4001
+/*var app4001 = express();
+app4001.get('/', function (req, res) {
+	res.end('4000');
+});
+app3000.listen(4000);
+
+// 这里加个判断 如果res有返回的数据有arr target设置成'http://localhost:4001'
+// 可以建一个集群 ['http://localhost:4000','http://localhost:4001']
+app.use((req, res) => {
+	proxy.web(req, res, {
+		target:'http://localhost:4000'
+	});
+});*/
